@@ -1,0 +1,19 @@
+# Logs
+*.log
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+config.js
+newrelic.js
+
+# data loading files
+driveHistoryDataWithCoord.csv
+
+# Coverage directory used by tools like istanbul
+coverage
