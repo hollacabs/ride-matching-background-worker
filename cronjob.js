@@ -8,12 +8,11 @@ var job = new CronJob({
     const moment = require('moment');
 
     //update this to define the date range from which we should pull new data. Should eventually be synced to the crontab in prod.
-    let timestamp = moment().subtract(2, 'days').format('YYYY-MM-DD HH:mm:ss');
+    let timestamp = moment().subtract(5, 'days').format('YYYY-MM-DD HH:mm:ss');
 
     // selects the current batch of 10000 to run during minute 1 - 10. 
     // e.g. block 20k-30k will run at 5:02 and block 90k-100k will run at 3:59
     let currentBlock = timestamp.slice(-4, -3) * 10000;
-    let promiseArray = [];
     console.log('Current Block:', currentBlock);
 
     for (var i = currentBlock; i < currentBlock + 10000; i++) {
