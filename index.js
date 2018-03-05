@@ -6,4 +6,4 @@ const app = new Koa();
 
 cron.job.start();
 
-console.log('Node is running');
+console.log('Node background worker is running');
